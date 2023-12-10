@@ -17,6 +17,13 @@ spec:
       containers:
         - name: goserver
           image: "danielsdev/hello-go:v2.0"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 20Mi
+            limits:
+              cpu: 500m
+              memory: 25Mi
 
           startupProbe:
             httpGet:
